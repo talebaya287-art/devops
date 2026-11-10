@@ -31,3 +31,14 @@ jobs:
       # Build Maven
       - name: Build Java project with Maven
         run: mvn clean package
+              # Checkout the code
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # Gitleaks scan (before compilation)
+      - name: Run Gitleaks scan
+        uses: zricethezav/gitleaks-action@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
