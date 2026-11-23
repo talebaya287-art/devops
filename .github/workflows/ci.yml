@@ -38,28 +38,6 @@ jobs:
           fetch-depth: 0
 
 
-
-name: DevSecOps Pipeline
-
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-
-jobs:
-  security:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout source code
-        uses: actions/checkout@v4
-
-      # Gitleaks scan (before compilation)
-      - name: Run Gitleaks scan
-        uses: zricethezav/gitleaks-action@v2
-
-
-      
+# Gitleaks scan (before compilation)
+  -name: Run Gitleaks scan
+uses: zricethezav/gitleaks-action@v2
