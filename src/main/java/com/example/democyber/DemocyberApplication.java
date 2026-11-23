@@ -14,8 +14,5 @@ public class DemocyberApplication {
         SpringApplication.run(DemocyberApplication.class, args);
     }
 
-    @GetMapping("/")
-    public String hello() {
-        return "Bonjour depuis democyber Spring Boot !";
-    }
+  
 }
