@@ -99,6 +99,7 @@ jobs:
   with:
     projectBaseDir: .
     args: >
-      -Dsonar.organization=${{ secrets.SONAR_ORGANIZATION }}
-      -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
+     -Dsonar.organization=${{ secrets.SONAR_ORGANIZATION }}
+     -Dsonar.projectKey=${{ secrets.SONAR_PROJECT_KEY }}
+     -Dsonar.login=${{ secrets.SONAR_TOKEN }}
 
